@@ -24,6 +24,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - helper method
+- (Task *)returnNewTaskObject
+{
+    Task *taskObject = [[Task alloc] init];
+    taskObject.title = self.textField.text;
+    taskObject.description1 = self.textView.text;
+    taskObject.date = self.dataPicker.date;
+    taskObject.isCompleted = NO;
+    return taskObject;
+}
 /*
 #pragma mark - Navigation
 
@@ -35,8 +45,10 @@
 */
 
 - (IBAction)addTaskButtonPressed:(UIButton *)sender {
+    [self.delegate didAddTask:[self returnNewTaskObject]];
 }
 
 - (IBAction)cancelButtonPressed:(UIButton *)sender {
+    [self.delegate didCancel];
 }
 @end
