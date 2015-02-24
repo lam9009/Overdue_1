@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF3C98401A9D20E60028D147 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3C983F1A9D20E60028D147 /* Task.m */; };
 		DFB7C3751A9CF54F00A8A05C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB7C3741A9CF54F00A8A05C /* main.m */; };
 		DFB7C3781A9CF54F00A8A05C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB7C3771A9CF54F00A8A05C /* AppDelegate.m */; };
 		DFB7C37B1A9CF54F00A8A05C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB7C37A1A9CF54F00A8A05C /* ViewController.m */; };
@@ -14,6 +15,9 @@
 		DFB7C3801A9CF54F00A8A05C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFB7C37F1A9CF54F00A8A05C /* Images.xcassets */; };
 		DFB7C3831A9CF54F00A8A05C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFB7C3811A9CF54F00A8A05C /* LaunchScreen.xib */; };
 		DFB7C38F1A9CF54F00A8A05C /* Overdue_1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB7C38E1A9CF54F00A8A05C /* Overdue_1Tests.m */; };
+		DFB7C39A1A9CF63B00A8A05C /* AddTask.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB7C3991A9CF63A00A8A05C /* AddTask.m */; };
+		DFB7C39D1A9CF64E00A8A05C /* DetailTask.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB7C39C1A9CF64E00A8A05C /* DetailTask.m */; };
+		DFB7C3A01A9CF66100A8A05C /* EditTask.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB7C39F1A9CF66100A8A05C /* EditTask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF3C983C1A9D1C580028D147 /* Overdue_1.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Overdue_1.pch; sourceTree = SOURCE_ROOT; };
+		DF3C983E1A9D20E60028D147 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		DF3C983F1A9D20E60028D147 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		DFB7C36F1A9CF54F00A8A05C /* Overdue_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Overdue_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB7C3731A9CF54F00A8A05C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFB7C3741A9CF54F00A8A05C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +47,12 @@
 		DFB7C3881A9CF54F00A8A05C /* Overdue_1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Overdue_1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB7C38D1A9CF54F00A8A05C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFB7C38E1A9CF54F00A8A05C /* Overdue_1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Overdue_1Tests.m; sourceTree = "<group>"; };
+		DFB7C3981A9CF63A00A8A05C /* AddTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTask.h; sourceTree = "<group>"; };
+		DFB7C3991A9CF63A00A8A05C /* AddTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTask.m; sourceTree = "<group>"; };
+		DFB7C39B1A9CF64E00A8A05C /* DetailTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTask.h; sourceTree = "<group>"; };
+		DFB7C39C1A9CF64E00A8A05C /* DetailTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTask.m; sourceTree = "<group>"; };
+		DFB7C39E1A9CF66100A8A05C /* EditTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTask.h; sourceTree = "<group>"; };
+		DFB7C39F1A9CF66100A8A05C /* EditTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTask.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +73,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF3C983D1A9D20C60028D147 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DF3C983E1A9D20E60028D147 /* Task.h */,
+				DF3C983F1A9D20E60028D147 /* Task.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		DFB7C3661A9CF54F00A8A05C = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +103,7 @@
 		DFB7C3711A9CF54F00A8A05C /* Overdue_1 */ = {
 			isa = PBXGroup;
 			children = (
+				DF3C983D1A9D20C60028D147 /* Models */,
 				DFB7C3761A9CF54F00A8A05C /* AppDelegate.h */,
 				DFB7C3771A9CF54F00A8A05C /* AppDelegate.m */,
 				DFB7C3791A9CF54F00A8A05C /* ViewController.h */,
@@ -89,6 +112,12 @@
 				DFB7C37F1A9CF54F00A8A05C /* Images.xcassets */,
 				DFB7C3811A9CF54F00A8A05C /* LaunchScreen.xib */,
 				DFB7C3721A9CF54F00A8A05C /* Supporting Files */,
+				DFB7C3981A9CF63A00A8A05C /* AddTask.h */,
+				DFB7C3991A9CF63A00A8A05C /* AddTask.m */,
+				DFB7C39B1A9CF64E00A8A05C /* DetailTask.h */,
+				DFB7C39C1A9CF64E00A8A05C /* DetailTask.m */,
+				DFB7C39E1A9CF66100A8A05C /* EditTask.h */,
+				DFB7C39F1A9CF66100A8A05C /* EditTask.m */,
 			);
 			path = Overdue_1;
 			sourceTree = "<group>";
@@ -96,6 +125,7 @@
 		DFB7C3721A9CF54F00A8A05C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DF3C983C1A9D1C580028D147 /* Overdue_1.pch */,
 				DFB7C3731A9CF54F00A8A05C /* Info.plist */,
 				DFB7C3741A9CF54F00A8A05C /* main.m */,
 			);
@@ -219,6 +249,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF3C98401A9D20E60028D147 /* Task.m in Sources */,
+				DFB7C3A01A9CF66100A8A05C /* EditTask.m in Sources */,
+				DFB7C39D1A9CF64E00A8A05C /* DetailTask.m in Sources */,
+				DFB7C39A1A9CF63B00A8A05C /* AddTask.m in Sources */,
 				DFB7C37B1A9CF54F00A8A05C /* ViewController.m in Sources */,
 				DFB7C3781A9CF54F00A8A05C /* AppDelegate.m in Sources */,
 				DFB7C3751A9CF54F00A8A05C /* main.m in Sources */,
@@ -343,6 +377,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = Overdue_1.pch;
 				INFOPLIST_FILE = Overdue_1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,6 +388,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = Overdue_1.pch;
 				INFOPLIST_FILE = Overdue_1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,6 +448,7 @@
 				DFB7C3941A9CF54F00A8A05C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DFB7C3951A9CF54F00A8A05C /* Build configuration list for PBXNativeTarget "Overdue_1Tests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +457,7 @@
 				DFB7C3971A9CF54F00A8A05C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
