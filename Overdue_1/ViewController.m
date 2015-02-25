@@ -16,8 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    NSArray *tasksAsPropertyLists = [[NSUserDefaults standardUserDefaults] arrayForKey:TASK_OBJECTS_KEY];
+    for (NSDictionary *dictionary in tasksAsPropertyLists) {
+        Task *taskObject = [self taskObjectForDictionary:dictionary];
+        [self.taskObjects addObject:taskObject];
+    }
+
 }
+
 
 - (NSMutableArray *)taskObjects
 {
@@ -48,6 +58,9 @@
 -(void)didAddTask:(Task *)task
 {
     [self.taskObjects addObject:task];
+    
+    NSLog(@"%@", task.title);
+    
     NSMutableArray *taskObjectsAsPropertyLists = [[[NSUserDefaults standardUserDefaults] arrayForKey:TASK_OBJECTS_KEY] mutableCopy];
     if (!taskObjectsAsPropertyLists) taskObjectsAsPropertyLists = [[NSMutableArray alloc] init];
     /* create a method before finishing this to convert task to property list */
@@ -67,5 +80,36 @@
 {
     NSDictionary *dictionary = @{TASK_TITLE : taskObject.title, TASK_DESCRIPTION : taskObject.description, TASK_DATE : taskObject.date, TASK_COMPLETION : @(taskObject.isCompleted)};
     return dictionary;
+}
+
+#pragma mark - helper method for viewDidLoad
+- (Task *)taskObjectForDictionary:(NSDictionary *)dictionary
+{
+    Task *taskObject = [[Task alloc] initWithData:dictionary];
+    return taskObject;
+}
+
+#pragma mark - UITableViewDataSource/Delegate methods
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.taskObjects count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    Task *task = [self.taskObjects objectAtIndex:indexPath.row];
+    cell.textLabel.text = task.title;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *stringFromDate = [formatter stringFromDate:task.date];
+    cell.detailTextLabel.text = stringFromDate;
+    return cell;
 }
 @end

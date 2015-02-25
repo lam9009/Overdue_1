@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AddTask.h"
 
-@interface ViewController : UIViewController <AddTaskViewControllerDelegate>
+@interface ViewController : UIViewController <AddTaskViewControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)addTaskBarButtonPressed:(UIBarButtonItem *)sender;
